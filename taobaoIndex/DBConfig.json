@@ -1,0 +1,7 @@
+{
+    "host":"localhost",
+    "port":3306,
+    "user":"root",
+    "passwd":"Sgy323",
+    "db":"etc_crawl"
+}

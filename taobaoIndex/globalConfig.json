@@ -1,0 +1,10 @@
+{
+    "webDriverPath":{
+                    "Firefox":"D:\\study\\FireFox\\firefox.exe",
+                    "Chrome":"",
+                    "IE":""},
+    "taobaoIndexLoginURL":"https://login.taobao.com/member/login.jhtml?spm=a2107.1.0.0.5ymBBI&enup=false&from=taobaoindex&style=&sub=true&redirect_url=http%3A%2F%2Fshu.taobao.com%2Flogin%2Fcallback",
+    "firefoxProfile":"E:\\xuweitao\\WebSpider\\taobao\\xuweitaoFirefox",
+    "tableCreateSQL":"CREATE TABLE `taobaoindex_trendindex` (  `details` text,  `lastdate` datetime DEFAULT NULL,  `startdate` datetime DEFAULT NULL,  `endDate` datetime DEFAULT NULL,  `days` int(11) DEFAULT NULL,  `provinceNames` text,  `interestNames` text,  `totalUser` text,  `queries` text,  `types` text,  `hitKFC` bit(1) DEFAULT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+
+}

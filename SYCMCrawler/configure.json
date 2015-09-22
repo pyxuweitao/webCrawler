@@ -1,0 +1,10 @@
+{
+    "webDriverPath":{
+                    "Firefox":"D:\\study\\FireFox\\firefox.exe",
+                    "Chrome":"",
+                    "IE":""},
+    "BussinessStaffURL":"http://beta.sycm.taobao.com/login.htm?_target=http%3A%2F%2Fbeta.sycm.taobao.com%2Findex.htm",
+    "firefoxProfile":"E:\\xuweitao\\WebSpider\\taobao\\xuweitaoFirefox",
+    "usersIWantToCrawlOnly":[],
+    "usersNeedToBeInitialized":[]
+}

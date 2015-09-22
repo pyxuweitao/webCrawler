@@ -1,0 +1,16 @@
+{
+    "小鳄龟的春天:春风入夜":
+            {"passwd":"zhuican123",
+             "db":"db_sample_shop",
+             "downloadPath":"e:\\xuweitao\\WebSpider\\taobao\\download",
+             "uid":66666,
+             "token":"abcdefg",
+             "CSSSelector":{
+                 "raw_fact_shop_dsr":"#\\33 7120 > ul:nth-child(3) > li:nth-child(5) > a:nth-child(1)",
+                 "raw_fact_shop_collect":"#\\33 6671 > ul:nth-child(3) > li:nth-child(5) > a:nth-child(1)",
+                 "raw_fact_shop_uv":"#\\33 6669 > ul:nth-child(3) > li:nth-child(5) > a:nth-child(1)",
+                 "raw_fact_shop_order_sum":"#\\33 6670 > ul:nth-child(3) > li:nth-child(5) > a:nth-child(1)"
+             }
+            }
+
+}

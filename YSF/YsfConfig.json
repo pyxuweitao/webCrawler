@@ -1,0 +1,37 @@
+{
+    "APIurl":"http://card.play.admin.jaeapp.com/jsontest/testData.php",
+    "tableIDMapping":{
+        "ump_raw_shop_trade_d":{
+            "id":0,
+            "CreateSQL":"CREATE TABLE ump_raw_shop_trade_d (thedate BIGINT COMMENT '粒度是天',shop_id BIGINT COMMENT '店铺id',seller_id BIGINT COMMENT '卖家的userid',alipay_trade_num BIGINT COMMENT '统计周期内，用户成功完成（支付宝）支付的子订单数（一笔订单，按照商品分拆为多个子订单）。',alipay_auction_num BIGINT COMMENT '通过支付宝付款的商品总件数',alipay_trade_amt DOUBLE COMMENT '成功完成支付宝支付的金额(元)',alipay_winner_num BIGINT COMMENT '成功拍下并完成支付宝付款的人数',gmv_auction_num BIGINT COMMENT '商品被拍下的总件数',gmv_trade_amt DOUBLE COMMENT '统计周期内，用户成功拍下的金额（以宝贝商品标价做计算）。',gmv_trade_num BIGINT COMMENT '统计周期内，用户成功拍下的子订单数（一笔订单，按照商品分拆为多个子订单）。',gmv_winner_num BIGINT COMMENT '成功拍下的人数。所选时间段内同一用户拍下多笔订单会进行去重计算。',same_day_trade_num BIGINT COMMENT '当日拍下且当日通过支付宝付款的子订单数',same_day_trade_amt DOUBLE COMMENT '当日拍下且当日通过支付宝付款的金额',same_day_auction_num BIGINT COMMENT '当日拍下且当日通过支付宝付款的商品件数',plot_gmv_trade_num BIGINT COMMENT '促销拍下笔数',plot_gmv_trade_amt DOUBLE COMMENT '促销拍下金额(元)',plot_gmv_auction_num BIGINT COMMENT '促销拍下商品数',noplot_gmv_trade_num BIGINT COMMENT '非促销拍下笔数',noplot_gmv_trade_amt DOUBLE COMMENT '非促销拍下金额',noplot_gmv_auction_num BIGINT COMMENT '非促销拍下商品数',plot_alipay_trade_num BIGINT COMMENT '促销支付宝笔数',plot_alipay_trade_amt DOUBLE COMMENT '促销支付宝金额',plot_alipay_auction_num BIGINT COMMENT '促销支付宝商品数',noplot_alipay_trade_num BIGINT COMMENT '非促销支付宝笔数',noplot_alipay_trade_amt DOUBLE COMMENT '非促销支付宝金额',noplot_alipay_auction_num BIGINT COMMENT '非促销支付宝商品数',trade_repeat_num BIGINT COMMENT '成交回头客人数',succ_trade_amt DOUBLE COMMENT '交易成功金额',succ_trade_num BIGINT COMMENT '交易成功笔数',succ_auction_num BIGINT COMMENT '买家已收货并验收的商品数',alipay_order_num BIGINT COMMENT '通过支付宝成功完成付款的父订单数。',gmv_order_num BIGINT COMMENT '拍下的父订单数。',online_auction_num BIGINT COMMENT '在售商品数',succ_refund_trade_amt DOUBLE COMMENT '退款成功的金额',succ_refund_order_num BIGINT COMMENT '成功退款父订单数')COMMENT '商品描述：每个店铺的每日销售数据；统计周期：每日';"
+        },
+        "ump_raw_shop_order_stat_d":{
+            "id":1,
+            "CreateSQL":"CREATE TABLE ump_raw_shop_order_stat_d (thedate BIGINT COMMENT '日期，粒度是天',seller_id BIGINT COMMENT '卖家的userid',shop_id BIGINT COMMENT '店铺ID',lost_order_num BIGINT COMMENT '当天成功拍下，卖家或买家主动关闭交易的父订单数',lost_order_amt DOUBLE COMMENT '当天成功拍下，卖家或买家主动关闭交易的订单金额',avg_delivery_duration DOUBLE COMMENT '发货的订单，从支付宝支付到发货的平均时间跨度',alipay_order_num BIGINT COMMENT '通过支付宝成功完成付款的父订单数。')COMMENT '按天统计，店铺流失订单，发货等数据统计；统计周期：每日';"
+        },
+        "ump_raw_shop_platform_region_view_d":{
+            "id":2,
+            "CreateSQL":"CREATE TABLE ump_raw_shop_platform_region_view_d (thedate BIGINT COMMENT '粒度到天',visit_platform BIGINT COMMENT '访问平台，1是无线，2是PC',seller_id BIGINT,shop_id BIGINT,region_id BIGINT,pv BIGINT COMMENT '页面被查看的次数。.',uv BIGINT COMMENT '页面的独立访问人数。所选时间段内，同一访客多次访问会进行去重计算。',ipv BIGINT COMMENT '统计周期内，宝贝页面被浏览的次数。',iuv BIGINT COMMENT '统计周期内，浏览宝贝页的独立访客数。',view_repeat_num BIGINT COMMENT '浏览回头客用户数')"
+        },
+        "ump_raw_auction_collect_d":{
+            "id":3,
+            "CreateSQL":"CREATE TABLE ump_raw_auction_collect_d (thedate BIGINT COMMENT '日期，粒度是天',shop_id BIGINT COMMENT '店铺ID',seller_id BIGINT COMMENT '卖家的userid',auction_id BIGINT COMMENT '商品ID',auction_collect_num BIGINT COMMENT '用户收藏商品的总次数')COMMENT '每个商品的每日收藏数据；统计周期：每日';"
+        },
+        "ump_raw_auction_traffic_d":{
+            "id":4,
+            "CreateSQL":"CREATE TABLE ump_raw_auction_traffic_d (thedate BIGINT COMMENT '日期，粒度是天',shop_id BIGINT,seller_id BIGINT COMMENT '卖家的userid',auction_id BIGINT COMMENT '商品id',iuv BIGINT COMMENT '统计周期内，浏览宝贝页的独立访客数。',ipv BIGINT COMMENT '统计周期内，宝贝页面被浏览的次数。',bounce_rate DOUBLE COMMENT '只访问了1个页面就离开的访问次数占入店次数的百分比。')COMMENT '每个商品的流量日表；统计周期：每日';"
+        },
+        "ump_raw_shop_auction_basket":{
+            "id":5,
+            "CreateSQL":"CREATE TABLE ump_raw_shop_auction_basket (thedate BIGINT COMMENT '日期，粒度是天',shop_id BIGINT COMMENT '店铺id',seller_id BIGINT COMMENT '卖家的userid',auction_id BIGINT COMMENT '商品id',asso_access_num BIGINT COMMENT '用户一次访问（一次入店连续访问），访问2种及以上商品记为一次关联访问',asso_access_user_num BIGINT COMMENT '用户一次访问（一次入店连续访问），访问2种及以上商品记为一次关联访问，则关联访问的用户去重即为关联访问用户数',asso_alipay_num BIGINT COMMENT 'asso_alipay_num',asso_alipay_user_num BIGINT COMMENT '关联购买的去重后的用户数',asso_alipay_amt DOUBLE COMMENT '关联购买的订单的总金额',asso_alipay_auction_num BIGINT COMMENT '关联购买的订单的商品总件数',asso_alipay_trade_num BIGINT COMMENT '关联购买的子订单总数')COMMENT '店铺商品关联访问及销售天表';"
+        },
+        "ump_raw_shop_region_order_loss_d":{
+            "id":6,
+            "CreateSQL":"CREATE TABLE ump_raw_shop_region_order_loss_d (thedate BIGINT COMMENT '日期，粒度是天',seller_id BIGINT COMMENT '卖家的userid',shop_id BIGINT COMMENT '店铺ID',region_id BIGINT COMMENT '地域ID',lost_order_num BIGINT COMMENT '当天成功拍下，卖家或买家主动关闭交易的父订单数',lost_order_amt DOUBLE COMMENT '当天成功拍下，卖家或买家主动关闭交易的订单金额')COMMENT '前天统计，店铺细分地域的流失的订单表。目前只细分省份。';"
+        },
+        "ump_raw_auctionset_asso_d":{
+            "id":7,
+            "CreateSQL":"CREATE TABLE ump_raw_auctionset_asso_d (thedate BIGINT COMMENT '日期，粒度是天',shop_id BIGINT COMMENT '店铺ID',seller_id BIGINT COMMENT '店铺ID',auction_id_1 BIGINT COMMENT '商品ID1，关联商品对',auction_id_2 BIGINT COMMENT '商品ID2，关联商品对',asso_access_num BIGINT COMMENT '用户一次访问（一次入店连续访问），访问2种及以上商品记为一次关联访问',asso_access_user_num BIGINT COMMENT '用户一次访问（一次入店连续访问），访问2种及以上商品记为一次关联访问，则关联访问的用户去重即为关联访问用户数',asso_alipay_num BIGINT COMMENT '关联购买的订单总数',asso_alipay_user_num BIGINT COMMENT '关联购买的去重后的用户数',asso_alipay_amt DOUBLE COMMENT '关联购买的订单的总金额',asso_alipay_auction_num BIGINT COMMENT '关联购买的订单的商品总件数',asso_alipay_trade_num BIGINT COMMENT '关联购买的子订单总数')COMMENT '按天统计，店铺内商品组合的关联数据';"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "host":"localhost",
+    "port":3306,
+    "user":"root",
+    "passwd":"Sgy323",
+    "database":"test",
+    "createTableSQL":{
+        "mj_data_industry_general_trend":"CREATE TABLE `mj_data_industry_general_trend` (  `updateTime` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',  `amount` int(255) DEFAULT NULL,  `date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',  `cat_id` bigint(20) NOT NULL,  PRIMARY KEY (`cat_id`,`date`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='整体市场行情';",
+        "mj_data_industry_hotshops_list":"CREATE TABLE IF NOT EXISTS `mj_data_industry_hotshops_list` (  `updateTime` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',  `amount30` bigint(20) DEFAULT NULL,  `chainGrowth` double(255,0) DEFAULT NULL,  `chainGrowthTrend` int(255) DEFAULT NULL,  `dsr` varchar(255) DEFAULT NULL,  `favor` bigint(255) DEFAULT NULL,  `id` bigint(20) DEFAULT NULL,  `image` varchar(255) DEFAULT NULL,  `juhuasuan` int(11) DEFAULT NULL,  `name` varchar(255) DEFAULT NULL,  `p4p` int(11) DEFAULT NULL,  `price30` bigint(20) DEFAULT NULL,  `rank` int(11) DEFAULT NULL,  `sales` int(11) DEFAULT NULL,  `sellerNick` varchar(255) DEFAULT NULL,  `taoke` int(11) DEFAULT NULL,  `tbouter` int(11) DEFAULT NULL,  `zuanzhan` int(11) DEFAULT NULL,  `cat_id` bigint(20) DEFAULT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='热销店铺排行';",
+        "mj_shop_item_get_market_p4p_list":"CREATE TABLE `mj_shop_item_get_market_p4p_list` (`updateTime` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',`amount` INT(11) NULL DEFAULT NULL,`date` TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00',`displayRate` INT(11) NULL DEFAULT NULL,`keyword` TEXT NULL,`price` BIGINT(20) NULL DEFAULT NULL,`itemid` BIGINT(20) NOT NULL,PRIMARY KEY (`date`, `itemid`))COMMENT='单品数据跟踪-直通车投放'COLLATE='utf8_general_ci'ENGINE=InnoDB;",
+        "mj_data_item_market_tbk":"CREATE TABLE `mj_data_item_market_tbk` (`updateTime` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',`amount` INT(11) NULL DEFAULT NULL,`amount_` INT(11) NULL DEFAULT NULL,`date` TIMESTAMP NOT NULL DEFAULT '0000-00-00 00:00:00',`discount` DOUBLE NULL DEFAULT NULL,`itemId` BIGINT(20) NOT NULL,`payPrice` DOUBLE(10,2) NULL DEFAULT NULL,`payPrice30` DOUBLE NULL DEFAULT NULL,`payRate` DOUBLE NULL DEFAULT NULL,`price` INT(11) NULL DEFAULT NULL,`price_` INT(11) NULL DEFAULT NULL,`shopId` BIGINT(20) NULL DEFAULT NULL,`title` VARCHAR(255) NULL DEFAULT NULL,PRIMARY KEY (`date`, `itemId`))COMMENT='淘宝客'COLLATE='utf8_general_ci'ENGINE=InnoDB;",
+        "mj_hotitems_info":"CREATE TABLE `mj_hotitems_info` (  `updateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',  `itemid` bigint(20) NOT NULL COMMENT '商品ID',  `shopid` bigint(20) DEFAULT NULL COMMENT '店铺ID',  `title` text COMMENT '标题',  `sellerNick` varchar(255) DEFAULT NULL COMMENT '卖家名称',  `brand` varchar(255) DEFAULT NULL COMMENT '品牌',  `cid` bigint(20) DEFAULT NULL COMMENT '品类ID',  `price` int(11) DEFAULT NULL COMMENT '销售额',  `amount` int(11) DEFAULT NULL COMMENT '销量',  `offer` int(11) DEFAULT NULL COMMENT '成交笔数',  `avg_price` decimal(10,2) DEFAULT NULL COMMENT '客单价',  `date` datetime NOT NULL COMMENT '时间',  `juhuasuan` int(11) DEFAULT NULL,  `p4p` int(11) DEFAULT NULL,  `taoke` int(11) DEFAULT NULL,  `tbouter` int(11) DEFAULT NULL,  `zuanzhan` int(11) DEFAULT NULL,  PRIMARY KEY (`itemid`,`date`)) ENGINE=InnoDB DEFAULT CHARSET=utf8;"
+
+    }
+
+}
+
+
+

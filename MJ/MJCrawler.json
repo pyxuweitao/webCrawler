@@ -1,0 +1,7 @@
+{
+    "users_to_crawl":["13888888888"],
+    "crawler_config":{
+        "13888888888":["mj_hotitems_info"]
+    },
+    "proxy":{"ip":"115.159.5.247","port":80}
+}
